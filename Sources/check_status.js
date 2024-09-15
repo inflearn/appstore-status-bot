@@ -41,7 +41,7 @@ const checkVersion = async (app) => {
       console.log("[*] status is different");
 
       slack.post(app, db.get(submissionStartKey));
-      discord.post(app, db.get(submissionStartKey));
+      // discord.post(app, db.get(submissionStartKey));
 
       if (app.status == "Waiting For Review") {
         db.set(submissionStartKey, new Date());
